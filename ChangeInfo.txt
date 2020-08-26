@@ -1,0 +1,43 @@
+// What is Changed in this version (1.3.4) AmkMcAuth-se (Small-Server Edition)
+//
+// This version has the upgrades to work like then "Big-Server Edition" AmkMcAuth
+// But without MySQL, Email etc., still the basics with add-ons.
+//
+// Code-fixup, removed old unused code.
+//
+// New-Features:
+
+// added invisibleMode // # Set players that are not logged in to invisible mode?
+// invisible_mode: false
+
+// added OnJoin  event (Join-Event when connects to the server).
+// added OnRgstr event (Join-Event when new Player has to Register his PlayerName).
+// added OnGrace event (Join-Event when Player was loggedin before: Grace login/No password).
+// added OnLogin event (Login-Event when Player correctly loggs in using "/login" command).
+// added OnLogof event (Logoff-Event when Player logges off using "/logoff" command).
+// added OnExit  event (Leave-Event when Player disconnects from the server).
+
+// Every event console command execution can be delayed by a number of game-ticks
+// To delay a command start the command-line with the parameter: AmkWait(NumberOfTicks),
+// Where NumberOfTicks is the number of game ticks to wait before running the command.
+// The parameter has to be "AmkWait(..)" otherwise AmkMcAuth will run this command without waiting.
+// If you wait to long the player might be logged off resulting in a message like" "No player was found".  
+
+// added teleportToSpawnWorld		Name of the world where the player spawns when a player joins
+// added useSpawnAtLocation  		"flag" to tell that there are XYZ coordinates have to be used (default=false)
+// added spawnAtLocationX			The X coordinate where the player is put (spawn coordinates)
+// added spawnAtLocationY			The Y coordinate where the player is put (spawn coordinates)
+// added spawnAtLocationZ			The Z coordinate where the player is put (spawn coordinates)
+
+// These new settings can only be used when teleport_to_spawn is true
+//  tpToSpawnTrue:
+//    # Spawn in special world (Default="": use default server spawn setting)
+//    teleportToSpawnWorld: ""
+//    # useSpawnAtLocation to Spawn at specific Location XYZ coordinates (default=false: use default server spawn setting)
+//    useSpawnAtLocation: false
+//    # if useSpawnAtLocation=true: Spawn at this XYZ coordinates location (must be a valid spawn point/block, otherwise horror??)
+//    spawnAtLocationX: 0
+//    spawnAtLocationY: 66
+//    spawnAtLocationZ: 0
+
+// See AmkMcAuth config.yml file for details (includes usage documentation).
